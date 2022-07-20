@@ -9,8 +9,8 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                 sudo rm -r /var/www/html/
-                 sudo cp -r /var/lib/jenkins/workspace/testing-1/build/ /var/www/html/
+                sh "sudo rm -r /var/www/html"
+                sh "sudo cp -r ${WORKSPACE}/build/ /var/www/html/"
             }
         }
     }
