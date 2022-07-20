@@ -10,7 +10,7 @@ pipeline {
         stage("Deploy") {
             steps {
                 sh "sudo rm -rf /var/www/html/"
-                sh "sudo cp -r /home/adduser/sites/build/ /var/www/html/"
+                sh "sudo cp -r ${WORKSPACE}/build/ /var/www/html/"
             }
         }
     }
