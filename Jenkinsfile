@@ -9,8 +9,8 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh "sudo rm -r /var/www/html/"
-                sh "sudo cp -r ${WORKSPACE}/build/ /var/www/html/"
+                 "sudo rm -r /var/www/html/"
+                 "sudo cp -r ${WORKSPACE}/build/ /var/www/html/"
             }
         }
     }
