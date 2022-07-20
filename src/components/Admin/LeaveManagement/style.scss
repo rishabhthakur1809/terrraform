@@ -1,0 +1,118 @@
+@import '../../../styles/helpers/helpers';
+
+.leaveManagement {
+    h2 {
+
+        font-size    : 19px;
+        line-height  : 26px;
+        font-weight  : 700;
+        color        : $color__text-dark;
+        margin-bottom: 30px;
+    }
+
+    Select,
+    input,
+    textarea {
+        border-radius: 0px;
+        font-size    : 14px;
+        margin-bottom: 20px;
+        background   : #EFEFEF;
+    }
+
+    textarea {
+        min-height: 82px;
+    }
+
+    .customCheck {
+        width  : 100%;
+        display: inline-block;
+    }
+
+    .form-check {
+        padding-left: 0px;
+    }
+
+    .para {
+        font-size: 16px;
+    }
+
+    .react-datepicker-wrapper {
+        width: 100%;
+    }
+
+    .react-datepicker-wrapper {
+        .form-control {
+            background         : #EFEFEF url(../../../Images/Icons/calendar.svg);
+            background-size    : 19px;
+            background-repeat  : no-repeat;
+            background-position: 95% 6px;
+            color              : 0084A3;
+        }
+    }
+}
+
+.balancecard {
+
+    .card {
+        border: none
+    }
+
+    margin-bottom: 30px;
+    @include box-shadow-card;
+    border        : none !important;
+    padding-bottom: 10px;
+
+    .balance_card_box {
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        flex-direction : column;
+        min-height     : 100px;
+
+
+        a {
+            color      : #00C2F0;
+            font-size  : 15px;
+            font-weight: 400;
+            display    : block;
+            text-align : center;
+        }
+
+        span {
+            font-size  : 13px;
+            font-weight: 400;
+        }
+    }
+
+
+
+    .days_left {
+        font-size    : 40px;
+        font-weight  : 400;
+        line-height  : 31px;
+        margin-bottom: 0;
+        color        : #333;
+    }
+
+    .progressBar {
+        padding : 10px;
+        position: relative;
+
+        span {
+            color   : $color__dark !important;
+            top     : -18px;
+            left    : 10px;
+            position: absolute;
+        }
+    }
+
+    .grantTitle {
+        text-align: right;
+    }
+
+    p {
+        font-weight: 600;
+        font-size  : 15px;
+        line-height: 16px
+    }
+}

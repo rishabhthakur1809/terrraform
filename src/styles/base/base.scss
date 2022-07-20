@@ -1,0 +1,117 @@
+@import 'reset';
+@import 'grid';
+@import 'typography';
+
+// Breakpoints
+// ------------------------- Source: http://blog.scur.pl/2012/06/variable-media-queries-less-css/
+$highdensity: "only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+"only screen and (min--moz-device-pixel-ratio: 1.5)",
+"only screen and (-o-min-device-pixel-ratio: 3/2)",
+"only screen and (min-device-pixel-ratio: 1.5)";
+
+$small: "only screen and (max-width: 575px)";
+$mobile: "only screen and (min-width: 576px)";
+$tablet: "only screen and (min-width: 768px)";
+$landscapeTablet: "only screen and (min-width: 992px)";
+$desktop: "only screen and (min-width: 1200px)";
+$wide: "only screen and (min-width: 1379px)";
+
+
+img {
+    max-width: 100%;
+}
+
+// custom-control style
+
+.custom-control {
+    padding-left: 1rem;
+}
+
+.custom-control .custom-control-input,
+.custom-control .custom-control-label {
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    background: $color__background-white;
+    border: 2px solid $color__primary;
+    border-radius: 0px;
+}
+
+
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: $color__primary;
+    background-color: $color__primary;
+}
+
+.custom-control-input:not(:disabled):active~.custom-control-label::before {
+    background-color: rgba(0, 194, 240, 25%);
+    border-color: rgba(0, 194, 240, 25%);
+}
+
+// Button style
+
+.btn {
+    border-radius: 0px;
+    padding: 10px;
+    @include transition;
+    box-shadow: none;
+    min-width: 206px;
+    line-height: 20px;
+    border: none;
+    margin: 5px;
+    font-size: 15px;
+
+    &.btn-primary {
+        background: $color__primary;
+
+        &:hover,
+        &:focus {
+            background: $color__secondary;
+            color: $color__text-white;
+            box-shadow: none;
+        }
+
+        &:not(:disabled):not(.disabled):active {
+            background: $color__secondary-dark;
+            color: $color__text-white;
+            box-shadow: none;
+        }
+
+    }
+
+    &.btn-outline-secondary {
+        background: $color__background-white;
+        color: $color__text-grey;
+        min-width: 206px;
+        border: 1px solid $color__border;
+
+        &:hover,
+        &:focus {
+            background: $color__secondary;
+            color: $color__text-white;
+            box-shadow: none;
+        }
+
+        &:not(:disabled):not(.disabled):active {
+            background: $color__secondary-dark;
+            color: $color__text-white;
+            box-shadow: none;
+        }
+    }
+}
+
+// breadcrumb style
+
+.breadcrumb {
+    padding: 1rem;
+    background-color: $color__background-white;
+    border-radius: 0;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: $color__secondary-dark;
+    font-weight: $fontWeightSemiBold;
+    font-size: $fontSizeHeading-3;
+    content: ">";
+}

@@ -1,0 +1,19 @@
+@import '../../../styles/helpers/helpers';
+
+// breadcrumb style
+
+.breadcrumb {
+    border-radius: 0;
+
+    .sidebar-toggle {
+        cursor: pointer;
+        margin-right: 35px;
+    }
+
+    &-item,
+    &-item a {
+        color: $color__secondary-dark;
+        font-weight: $fontWeightMedium;
+        font-size: $fontSizeHeading-3;
+    }
+}

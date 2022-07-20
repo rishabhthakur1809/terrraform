@@ -1,0 +1,16 @@
+// BOX SHADOW
+@mixin box-shadow-card($x: 0px, $y: 2px, $blur: 12px, $color: rgba(51,51,51,0.25)) {
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow:    $x $y $blur $color;
+    box-shadow:         $x $y $blur $color;
+}
+
+// Transitions
+
+@mixin transition($args: all .1s ease) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+  }
