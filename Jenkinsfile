@@ -9,8 +9,8 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-//                  sudo rm -r /var/www/html/
-                 sudo cp -r /var/lib/jenkins/workspace/testing-1/build/ {/var/www/html/}
+                 sudo rm -r /var/www/html/
+                 sudo cp -r /var/lib/jenkins/workspace/testing-1/build/ /var/${groovy:www/}html/
             }
         }
     }
